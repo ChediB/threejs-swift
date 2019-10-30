@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>My first three.js app</title>
+    </head>
+    <body>
+        <script>
+            function callback(message) {
+              try {
+                webkit.messageHandlers.callback.postMessage(message);
+              } catch(error) {
+                console.log(error);
+              }
+            }
+        </script>
+        <div>
+        <input type="submit" value="SceneKit" onclick="callback('SceneKit')" style="height:150;width:150"><br><br>
+        <input type="submit" value="Unity" onclick="callback('Unity')" style="height:150;width:150"> <br><br>
+        <input type="submit" value="three js" onclick="callback('three...')" style="height:150;width:150">
+        </div>
+    </body>
+</html>
